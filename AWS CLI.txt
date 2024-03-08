@@ -1,0 +1,8 @@
+## AWS CLI ##
+# SSO
+- To login -
+aws sso login --profile AdministratorAccess-136597286325
+
+- To Check if there's already an active SSO session -
+aws sts get-caller-identity
+

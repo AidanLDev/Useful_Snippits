@@ -1,0 +1,12 @@
+# Pull MongoDB 4.0.x from Docker Hub
+docker pull mongo:4.0
+
+# Start the MongoDB service at port 27017, and configure it to run automatically on system restarts
+docker run -it \
+  -v mongodata:/data/db \
+  -p 27017:27017 \
+  --name mongodb \
+  --restart unless-stopped \
+  -d mongo:4.0
+
+# Check if you're running MongoDB - http://localhost:27017
