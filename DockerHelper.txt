@@ -1,0 +1,49 @@
+### Docker Helper ###
+
+## Running MS SQL Server on Docker
+-- Can find docker images online
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=insert-pw-here" -e "MSSQL_PID=Evaluation" -p 1433:1433  --name sqlpreview --hostname sqlpreview -d mcr.microsoft.com/mssql/server:2022-preview-ubuntu-22.04
+
+# Once running, use the following to log into the instance on SQL studio etc.
+localhost
+SQL Login
+sa
+insert-pw
+
+# Create a test DB
+USE master
+GO
+IF NOT EXISTS (
+    SELECT [name]
+    FROM sys.databases
+    WHERE [name] = N'TestDB'
+)
+CREATE DATABASE TestDB
+GO
+
+# An image that might accept remote connections?
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=insert-password" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+
+server: localhostSQL Login
+sa
+insert-password
+DATABASE: database_here
+
+# Connection string:
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost,1433;Database=database_here;User Id=sa;Password=insert-password-here;MultipleActiveResultSets=true;TrustServerCertificate=True"
+  }
+
+## Running local Mongo db from docker
+# Pull MongoDB 4.0.x from Docker Hub
+docker pull mongo:4.0
+
+# Start the MongoDB service at port 27017, and configure it to run automatically on system restarts
+docker run -it \
+  -v mongodata:/data/db \
+  -p 27017:27017 \
+  --name mongodb \
+  --restart unless-stopped \
+  -d mongo:4.0
+
+# Check if you're running MongoDB - http://localhost:27017
