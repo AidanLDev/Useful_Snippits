@@ -3,7 +3,27 @@
 - SSO URL:
 https://d-9067fbbe85.awsapps.com/start
 - To login -
-aws sso login --profile AdministratorAccess-136597286325
+$ aws sso login --profile AdministratorAccess-136597286325
 
 - To Check if there's already an active SSO session (Also gets the AWS account number) -
-aws sts get-caller-identity
+$ aws sts get-caller-identity
+
+## CDK
+# Synthesize an AWS CloudFormation template
+$ cdk synth
+
+# List the stacks in the app
+$ cdk ls
+
+# Deploy the app
+$cdk deploy
+
+# Bootstrap the AWS environment
+$ cdk bootstrap
+
+# Check current changes
+$ cdk diff
+
+# Destroy apps resources
+cdk destroy
+
