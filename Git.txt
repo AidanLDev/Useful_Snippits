@@ -1,0 +1,18 @@
+# Delete local branches
+$ git branch -d <branch_name>
+
+# Delete local remote-tracking branch
+$ git branch --delete --remotes <remote>/<branch_name>
+OR
+$ git branch -rd origin/<branch_name>
+
+# Delete remote branch
+$ git push <remote> --delete <branch_name>
+
+
+# Get remote name with
+$ git remote -v
+
+# Add different repo as a branch
+$ git remote add -f b path/to/repo_b.git
+$ git remote update
