@@ -23,7 +23,8 @@ display_auto_detect=1
 auto_initramfs=1
 
 # Enable DRM VC4 V3D driver
-dtoverlay=vc4-kms-v3d
+# was dtoverlay=vc4-kms-v3d
+dtoverlay=vc4-fkms-v3d
 max_framebuffers=2
 
 # Don't have the firmware create an initial video= setting in cmdline.txt.
@@ -50,3 +51,4 @@ hdmi_safe=1
 hdmi_mode=16
 hdmi_force_hotplug=1
 config_hdmi_boost=9
+hdmi_group=1
