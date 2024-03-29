@@ -1,0 +1,9 @@
+## Update and upgrade everything
+sudo apt update
+sudo apt full-upgrade
+
+## Re-install kernel header
+sudo apt install raspberrypi-kernel-headers
+
+## Reboot
+sudo reboot
