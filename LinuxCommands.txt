@@ -7,3 +7,15 @@ sudo apt install raspberrypi-kernel-headers
 
 ## Reboot
 sudo reboot
+
+## Shutdown
+sudo shutdown -h -P now
+
+## SSH
+ssh <userName>@<IPAddressOfDevice>
+
+## Get IP of the device
+hostname -I
+
+## Open and edit a file
+sudo nano /file/path.txt
