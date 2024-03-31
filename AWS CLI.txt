@@ -27,3 +27,7 @@ $ cdk diff
 # Destroy apps resources
 cdk destroy
 
+
+## Green grass
+# Run IOT Software on AWS Greengrass Core Device
+sudo /greengrass/v2/alts/current/distro/bin/loader
