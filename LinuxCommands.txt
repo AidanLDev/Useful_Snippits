@@ -14,6 +14,9 @@ sudo shutdown -h -P now
 ## SSH
 ssh <userName>@<IPAddressOfDevice>
 
+# Quit SSH session
+exit
+
 ## Get IP of the device
 hostname -I
 
