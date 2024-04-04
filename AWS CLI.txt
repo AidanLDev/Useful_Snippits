@@ -29,5 +29,19 @@ cdk destroy
 
 
 ## Green grass
+# Install GreenGrass Software
+sudo -E java -Droot="/greengrass/v2" -Dlog.store=FILE \
+  -jar ./GreengrassInstaller/lib/Greengrass.jar \
+  --aws-region us-east-1 \
+  --thing-name GreengrassQuickStartCore-18e957de261 \
+  --thing-group-name GreengrassQuickStartGroup  \
+  --thing-policy-name GreengrassV2IoTThingPolicy \
+  --tes-role-name GreengrassV2TokenExchangeRole \
+  --tes-role-alias-name GreengrassCoreTokenExchangeRoleAlias \
+  --component-default-user ggc_user:ggc_group \
+  --provision true \
+  --setup-system-service true \
+  --deploy-dev-tools true
+
 # Run IOT Software on AWS Greengrass Core Device
 sudo /greengrass/v2/alts/current/distro/bin/loader
