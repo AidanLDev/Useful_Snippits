@@ -22,3 +22,6 @@ hostname -I
 
 ## Open and edit a file
 sudo nano /file/path.txt
+
+## Find current version of Ubuntu
+lsb_release -a 
