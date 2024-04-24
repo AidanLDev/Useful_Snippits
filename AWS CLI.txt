@@ -27,6 +27,9 @@ $ cdk diff
 # Destroy apps resources
 cdk destroy
 
+## AWS S3
+# Upload object to S3
+aws s3 cp /path/to/your/file s3://bucket-name/folder/you/want/to/store/your/file --region eu-west-2
 
 ## Green grass
 # Install GreenGrass Software
