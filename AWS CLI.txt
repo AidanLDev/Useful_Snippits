@@ -48,3 +48,16 @@ sudo -E java -Droot="/greengrass/v2" -Dlog.store=FILE \
 
 # Run IOT Software on AWS Greengrass Core Device
 sudo /greengrass/v2/alts/current/distro/bin/loader
+
+## AWS Amplify
+# Set up a new project
+amplify init
+
+# Set up an existing project
+amplify init --appId YOUR_APP_ID d145lfyuahcgap (the id can be found in the ARN)
+
+# List all envs
+amplify env list
+
+# Change env
+amplify env checkout <exising-environment>
