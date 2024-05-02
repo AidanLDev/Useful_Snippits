@@ -1,3 +1,4 @@
+## Cheat sheet - https://vinodhakumara2681997.medium.com/cheatsheet-linux-commands-for-devops-80be32b88656
 ## Update and upgrade everything
 sudo apt update
 sudo apt full-upgrade
