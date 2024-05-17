@@ -61,3 +61,6 @@ amplify env list
 
 # Change env
 amplify env checkout <exising-environment>
+
+# Run back-end locally (run concurrently with your local dev environment npm run dev/start etc.)
+npx ampx sandbox
