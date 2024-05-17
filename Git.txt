@@ -22,3 +22,10 @@ $ git remote -v
 # Add different repo as a branch
 $ git remote add -f b path/to/repo_b.git
 $ git remote update
+
+# merge
+$ git checkout <branchWeWantToMergeCodeInto>
+$ git merge <branchWeWantToMereIntoCheckoutOutBranch>
+
+# Set-up auto remote upstream when pushing a branch that has just been made and doesn't have a remote yet
+$ git config --global --add --bool push.autoSetupRemote true
