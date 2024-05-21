@@ -4,6 +4,12 @@ $ git checkout -b new-branch
 # Switching to a branch
 $ git checkout new-branch
 
+# List remote branches
+$ git branch -r
+
+# List local and remote branches
+$ git branch -a
+
 # Delete local branches
 $ git branch -d <branch_name>
 
