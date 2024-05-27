@@ -2,6 +2,10 @@
 
 Tmux is a terminal multiplier, we can save named sessions so we can quickly spin up what we need for a development environment or maybe application monitoring.
 
+# Installing tmux
+
+[Follow this](https://github.com/tmux/tmux/wiki/Installing)
+
 ### Basic commands
 
 - open Tmux
