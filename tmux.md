@@ -86,6 +86,8 @@ PREFIX spacebar cycles through these layours:
 "main-horizontal"
 "main-vertical"
 "tiled"
+To break pane to a new window
+$ PREFIX !
 
 ### Command mode
 
@@ -100,3 +102,24 @@ When we hit enter a new window will be in focus running the top process
 To configure tmux we need a .tmux.conf file in our home dir
 $ touch ~/.tmux.conf
 Here we can do everything from defining new key shortcuts to setting up a default environment with multiple windows, panes and running programs.
+To set options in the .tmux.conf file use:
+$ set-option OR $ set
+
+Changes aren't read by tmux automatically so if you're editing your .tmux.conf file while tmux is running. You'll need to enter tmux's command mode PREFIX : and type this whenever you make a change:
+$ PREFIX : source-file ~/.tmux.conf
+
+#### Update prefixes in our .tmux.conf file
+
+Set the default prefix from C-b to C-a
+$ set -g prefix C-a
+Free up the original default PREFIX (ctrl-b)
+$ unbind C-b
+
+Changing the default delay:
+$ set -s escape-time 1
+
+Update base index to 1 instead of 0:
+$ set -g base-index 1
+
+Update base pane number to 1 instead of 0
+$ set -g pane-base-index 1
