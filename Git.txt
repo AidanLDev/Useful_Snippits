@@ -21,6 +21,12 @@ $ git branch -rd origin/<branch_name>
 # Delete remote branch
 $ git push <remote> --delete <branch_name>
 
+# Reset branch
+$ git checkout <BranchYouWantToReset>
+
+$ git reset --hard origin/<BranchYouWantToBeInLineWith>
+
+$ git push origin <BranchYouWantToReset> --force
 
 # Get remote name with
 $ git remote -v
